@@ -84,7 +84,7 @@ module.exports = merge(commonConfig, {
         // 设置编译文件页面文件资源模块的引入
         new HtmlWebpackPlugin({
             // 模版源文件
-            template: '../template/index.html',
+            template: '../views/templates/index.html',
             // 编译后的目标文件
             filename: './html/index.html',
             // 要处理的模块文件
@@ -93,7 +93,7 @@ module.exports = merge(commonConfig, {
             inject: true
         }),
         new HtmlWebpackPlugin({
-            template: '../template/login.html',
+            template: '../views/templates/login.html',
             filename: './html/login.html',
             chunks: ['common', 'login'],
             inject: true
