@@ -15,7 +15,7 @@ module.exports = merge(commonConfig, {
     devServer: {
         contentBase: path.resolve(__dirname, ''),
         // 提供给外部访问
-        host: '0.0.0.0',
+        host: '127.0.0.1',
         port: 8188,
         // 允许开发服务器访问本地服务器的包JSON文件，防止跨域
         headers: {

@@ -84,18 +84,18 @@ module.exports = merge(commonConfig, {
         // 设置编译文件页面文件资源模块的引入
         new HtmlWebpackPlugin({
             // 模版源文件
-            template: '../template/home.html',
+            template: '../template/index.html',
             // 编译后的目标文件
-            filename: './html/home.html',
+            filename: './html/index.html',
             // 要处理的模块文件
-            chunks: ['common', 'home'],
+            chunks: ['common', 'index'],
             // 插入到<body>标签底部
             inject: true
         }),
         new HtmlWebpackPlugin({
-            template: '../template/detail.html',
-            filename: './html/detail.html',
-            chunks: ['common', 'detail'],
+            template: '../template/login.html',
+            filename: './html/login.html',
+            chunks: ['common', 'login'],
             inject: true
         }),
         // HtmlWebpackPlugin 运行后调整公共script文件在html中的位置，主要用于jQuery插件的引入
