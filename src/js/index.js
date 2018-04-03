@@ -14,20 +14,18 @@ if (module.hot) {
 }
 
 import Vue from 'vue';
+
 import ElementUI from 'element-ui';
+Vue.use(ElementUI);
 import 'element-ui/lib/theme-chalk/index.css';
-import Index from '../../views/components/index.vue';
 import '../scss/index.scss';
 
-Vue.use(ElementUI);
+import Router from './router';
+
+import Index from '../components/index/Index.vue';
 
 new Vue({
     el: '#app',
-    components: {
-        Index:Index
-    }
-})
-
-
-
-
+    router:Router,
+    render: h => h(Index)
+});

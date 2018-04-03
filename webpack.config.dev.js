@@ -13,7 +13,7 @@ module.exports = merge(commonConfig, {
 
     // 开发环境设置本地服务器，实现热更新
     devServer: {
-        contentBase: path.resolve(__dirname, ''),
+        contentBase: path.resolve(__dirname, 'views'),
         // 提供给外部访问
         host: '127.0.0.1',
         port: 8188,
@@ -30,7 +30,7 @@ module.exports = merge(commonConfig, {
     // 文件输出配置
     output: {
         // 设置路径，防止访问本地服务器相关资源时，被开发服务器认为是相对其的路径
-        publicPath: 'http://localhost:8188/dist/',
+        publicPath: 'http://localhost:8188/',
     },
 
     // 模块的处理配置，匹配规则对应文件，使用相应loader配置成可识别的模块

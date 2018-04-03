@@ -13,17 +13,17 @@ if (module.hot) {
     });
 }
 
+
 import Vue from 'vue';
+
 import ElementUI from 'element-ui';
+Vue.use(ElementUI);
 import 'element-ui/lib/theme-chalk/index.css';
-import Login from '../../views/components/login.vue';
 import '../scss/login.scss';
 
-Vue.use(ElementUI);
+import Login from '../components/Login.vue';
 
 new Vue({
     el: '#app',
-    components: {
-        Login:Login
-    }
-})
+    render: h => h(Login)
+});

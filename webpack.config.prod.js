@@ -65,14 +65,7 @@ module.exports = merge(commonConfig, {
     // 插件配置
     plugins: [
         // 清理生成的文件目录
-        //new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
-        new CleanWebpackPlugin([
-            path.resolve(__dirname, 'dist/css'),
-            path.resolve(__dirname, 'dist/fonts'),
-            path.resolve(__dirname, 'dist/images'),
-            path.resolve(__dirname, 'dist/js'),
-            path.resolve(__dirname, 'dist/html')
-        ]),
+        new CleanWebpackPlugin([path.resolve(__dirname, 'dist')]),
 
         // 压缩代码
         new webpack.optimize.UglifyJsPlugin({
@@ -84,7 +77,7 @@ module.exports = merge(commonConfig, {
         // 设置编译文件页面文件资源模块的引入
         new HtmlWebpackPlugin({
             // 模版源文件
-            template: '../views/templates/index.html',
+            template: './html/index.html',
             // 编译后的目标文件
             filename: './html/index.html',
             // 要处理的模块文件
@@ -93,7 +86,7 @@ module.exports = merge(commonConfig, {
             inject: true
         }),
         new HtmlWebpackPlugin({
-            template: '../views/templates/login.html',
+            template: './html/login.html',
             filename: './html/login.html',
             chunks: ['common', 'login'],
             inject: true

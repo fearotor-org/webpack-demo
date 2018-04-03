@@ -66,7 +66,12 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    loaders: {
+                        'scss': 'style-loader!css-loader!sass-loader'
+                    }
+                }
             }, {
                 test: /\.css$/,
                 // 提取CSS文件

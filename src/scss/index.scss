@@ -1,7 +1,89 @@
+@import "variables";
 
-@import 'variables';
-
-
-p {
-    background:$bg-color;
+body{
+    paddig:0px;
+    margin:0px;
+    background: $body-bg-color;
 }
+
+.logo{
+    position:absolute;
+    background: $logo-bg-color;
+    border-bottom: 1px solid $normal-border-color;
+    span{
+        display: inline-block;
+        line-height: 100px;
+        color:$logo-text-color;
+        margin-left:25px;
+    }
+}
+
+.menu{
+    position:absolute;
+    overflow-y: auto;
+    background: $menu-bg-color;
+}
+
+.top{
+    position:absolute;
+    background: $top-bg-color;
+    border-bottom: 1px solid $normal-border-color;
+    .quick {
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid $normal-border-color;
+        padding: 0px 15px;
+        word-break:keep-all;
+        white-space:nowrap;
+        overflow:hidden;
+    }
+    .tabs {
+        height: 50px;
+        .tab-btns {
+            position: relative;
+            bottom: -9px;
+            padding-right: 265px;
+            padding-left: 15px;
+        }
+        .other-btns {
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            width: 250px;
+            height: 50px;
+            .refresh-btn{
+                float:left;
+                margin-top:5px;
+            }
+            .user{
+                float:right;
+                margin-right:35px;
+                cursor: pointer;
+                color: $focus-text-color;
+                .username{
+                    float:right;
+                    display: inline-block;
+                    margin-top:15px;
+                    max-width:120px;
+                    word-break:keep-all;
+                    white-space:nowrap;
+                    overflow:hidden;
+                }
+                i{
+                    float:right;
+                    margin-top:18px;
+                }
+            }
+        }
+    }
+}
+
+.content{
+    position:absolute;
+    overflow-y: auto;
+    background: $content-bg-color;
+    .inner-content{
+        padding:15px;
+    }
+}
+

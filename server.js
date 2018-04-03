@@ -13,7 +13,22 @@ http.createServer((req, res) => {
     console.log('Request: ', req.url);
 
     try {
-        raw = fs.createReadStream(path.resolve(__dirname, pathname.replace(/^\//, '')));
+        if (pathname.charAt(pathname.length-1) != "/"){
+            pathname += "/";
+        }
+        let ext=path.extname(pathname);
+        if(ext==''){
+            pathname += "index.html";
+            ext='.html';
+        }
+
+        let baseDir;
+        if(ext=='.html'){
+            baseDir=path.resolve(__dirname,'dist/html');
+        }else{
+            baseDir=path.resolve(__dirname,'dist');
+        }
+        raw = fs.createReadStream(path.resolve(baseDir, pathname.replace(/^\//, '')));
 
         raw.on('error', (err) => {
             console.log(err);

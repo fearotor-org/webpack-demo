@@ -1,6 +1,65 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #1F2D3D;
+}
 
-@import 'variables';
+.box {
+    width: 500px;
+    height: 525px;
+    margin: 0px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -262px;
+    margin-left: -250px;
 
-p {
-  background:$bg-color;
+    .title {
+        height: 100px;
+        line-height: 100px;
+        color: #fff;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .content {
+        background: #475669;
+        color: #fff;
+        border-color: #475669;
+
+        .header-tag {
+            line-height: 36px;
+            color: #fff;
+        }
+
+        .x-input {
+            width: 300px;
+        }
+
+        .ecode-input {
+            width: 185px;
+        }
+
+        .vcode-input {
+            width: 180px;
+        }
+
+        .vcode-img {
+            margin-left: 10px;
+            height: 40px;
+            width: 110px;
+        }
+    }
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.el-form-item .el-form-item__label {
+  color: #fff;
 }
